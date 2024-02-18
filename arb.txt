@@ -1,0 +1,54 @@
+Assuming multiplier equation, given odds s, where s exists in space of [-I, -100] \union [100, +I].
+	R(s) = (s - 100) / s | (s < -100)
+	\union (s + 100) / 100 | (s > 100)
+
+Given that events x, y are mutually exclusive, with outcomes reflective of a bernouli trial. 
+Initial bets B_x, B_y reflect bets on events x, y respectively.
+
+Therefore, profit on arbitrage is modelled as
+	T_x = B_x * (R(x) - 1) - B_y | (x wins)
+	T_y = B_y * (R(y) - 1) - B_x | (y wins)
+
+There exists a combination/ordering of B_x, B_y, R(x), R(y) such that the following set of inequalities are satisfied:
+	T_x >= 0 
+	T_y >= 0 
+
+Assuming constant B_x, we model B_y as a function of B_x, R(x), R(y); i.e,
+	B_y = f(B_x, R(x), R(y)) where B_x is set arbitrarily as 1
+
+We reduce the previous profit equations as
+	T_x = 1 * (R(x) - 1) - f(1, R(x), R(y)) | (x wins)
+	T_y = f(1, R(x), R(y)) * (R(y) - 1) - 1 | (y wins)
+
+Recovering the inequality expressions, we have
+	T_x = 1 * (R(x) - 1) - f(1, R(x), R(y)) = R(x) - f(1, R(x), R(y)) - 1 >= 0 
+	T_y = f(1, R(x), R(y)) * (R(y) - 1) - 1 = f(1, R(x), R(y)) * R(y) - f(1, R(x), R(y)) - 1 >= 0 
+
+	R(x) - 1 >= f(1, R(x), R(y))
+	f(1, R(x), R(y) >= 1 / (R(y) - 1)
+
+We write the relationship in terms of R(x) and R(y) as
+	R(x) - 1 >= 1 / (R(y) - 1)
+	(R(x) - 1) * (R(y) - 1) >= 1 
+
+Summarized briefly as
+	R(x) * R(y) - R(x) - R(y) >= 0
+	
+Case 1: x >= 100, y >= 100
+	xy >= 100 * 100
+Case 2: x >= 100, y <= -100
+	x >= |y|
+Case 3: x <= -100, y >= 100
+	y >= |x|
+Case 4: x <= -100, x <= -100
+	100 * 100 >= |x|*|y| 
+	This case will never exist, because odds cannot be smaller because sample space is confined to [-I, -100]
+
+Recall T_x, T_y. We can determine the ROI, given cases 1-3 as
+	ROI_x = T_x / (B_x + B_y)	
+		  = [(B_x * R(x)) / (B_x + B_y)] - 1
+		
+	ROI_y = T_y / (B_x + B_y)	
+		  = [(B_y * R(y)) / (B_x + B_y)] - 1
+
+Equating these gives us the specific point for an outcome-invariant abritrage ROI,

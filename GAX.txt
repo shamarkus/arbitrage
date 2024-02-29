@@ -1,0 +1,31 @@
+Event Overlap in Sports Betting
+
+Assuming multiplier equation, given odds s, where s exists in space of [-I, -100] \union [100, +I]
+	R(s) = (s - 100) / s | (s < -100)
+	\union (s + 100) / 100 | (s > 100)
+
+Further assume some arbitrary game. Assume G, A, X, are random variables for player events, which are goals, assists, and points. X is defined as X = A + G
+
+The following markets exist across all books:
+	G > _C, G < _C
+	X > _C, X < _C, 
+	A > _C, A < _C
+		where _C is a small decimal value, usually 0.5 or 1.5
+
+BetRivers, theScore, Bet365 make the following milestone-based market:
+	G >= x (BetRivers, theScore) 
+	P >= x (BetRivers, Bet365)
+	X < x (BetRivers)
+	A >= x (Bet365)
+
+The only market missing is:
+	G < x 
+	A < x 
+
+The objective is to formulate an expected value calculation, given an appropriate overlap in occurence. Shorting assists, goals is missing from the market, but points can be shorted...
+
+	P(X >= x) = \sum_{i = x}^{\inf} P_X(i)
+	P(A + G >= x) = ...
+
+Assuming independence across A and G, we perform a convolution to obtain a new pdf Y = A + G.
+How does one empirically determine the distributions for A and G?

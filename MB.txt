@@ -1,0 +1,18 @@
+Matched Betting
+
+Here are the books of interest with instructions for sign-up, in order of profitability:
+(Note: try to use e-transfer, or debit card to mitigate cash advance fee)
+
+1) Fanduel - Sign up with link, and deposit $1000 (https://canada.casino.fanduel.com/registrationCA.do#RAF=Mark_1460578)
+
+2) BetMGM - Sign up with link, and deposit $1500 (https://promo.on.betmgm.ca/en/promo/sports/welcome-offer-1500)
+
+3) Bet365 - Sign up with link, and deposit $1000. On deposit, make sure you select option RISK-FREE BET UP TO $1000 (https://www.on.bet365.ca/olp/open-account)
+
+4) BetRivers - Sign up with link, and deposit $500. On deposit, make sure you enter deposit code SPORTS (https://on.betrivers.ca/?page=signup&step=1)
+
+5) Caesars - Sign up with link, and deposit $500. On sign-up, make sure you enter promo code CZRONBET (https://www.caesars.com/sportsbook-and-casino/on/promos/?bc=CZRONBET)
+
+6) NorthStar Bets - Sign up with link, and deposit $150 (https://www.northstarbets.ca/library/lp/sportsx.html)
+
+Books 1-5 offer promotions in the form of No-Sweat Bets. When hedged correctly, event-invariant returns are lower-bounded at 40%. In other words, total profit AT MINIMUM is projected as 40% * (4500) = $1800.
